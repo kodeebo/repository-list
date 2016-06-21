@@ -16,10 +16,16 @@
 <body>
 <div class="container">
   <h2 class="text-center">Javascript Repositories</h2>
-  <table class="table table-hover table-bordered table-striped">
+  <table id="table" class="table table-hover table-bordered table-striped">
 
-    <tr><th>Avatar</th><th>Name</th><th>Url</th><th>Description</th><th>Watchers</th></tr>
     <script id="table-template" type="text/x-handlebars-template">
+    <tr>
+          <th>Avatar</th>
+          <th>Name</th>
+          <th>Url</th>
+          <th>Description</th>
+          <th>Watchers</th>
+        </tr>
       {{#each items}}
       <tr>
         <td><img class="logo img-responsive" src="{{owner.avatar_url}}"></td>
@@ -30,6 +36,7 @@
       </tr>
       {{/each}}
     </script>
+
   </table>
   <div class="pagination">
         <button id="prev" class="btn btn-default" >Prev</button><button id="next" class="btn btn-default">Next</button>

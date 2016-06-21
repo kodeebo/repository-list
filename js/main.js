@@ -11,14 +11,14 @@ $(document).ready(function() {
   var makeCall = function(url) {
     $.getJSON(url, function(data) {
     var html = template(data);
-    $('.table').empty().append(html);
-
-    }); //End of getJSON
+    document.getElementById("table").innerHTML = html;
+    }); 
   };
 
-  
+  //display the first page of the results
   makeCall(url);
 
+  //add event handlers for the buttons
   document.getElementById("next").onclick=function() {
     if(page < 49) {
     page += 1;
@@ -27,6 +27,7 @@ $(document).ready(function() {
     updateCount();
     }
   }
+
     document.getElementById("prev").onclick=function() {
     if(page > 1) {
       page -= 1; 
