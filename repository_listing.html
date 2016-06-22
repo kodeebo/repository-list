@@ -1,56 +1,53 @@
 <head>
-       <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Områdestøy-eksponering</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-
-<script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
-<script src="js/handlebars-v4.0.5.js"></script>
-<link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <title>Javascript Repositories</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 </head>
+
 <body>
-<div class="container">
-  <h2 class="text-center">Javascript Repositories</h2>
-  <table id="table" class="table table-hover table-bordered table-striped">
-
-    <script id="table-template" type="text/x-handlebars-template">
-    <tr>
-          <th>Avatar</th>
-          <th>Name</th>
-          <th>Url</th>
-          <th>Description</th>
-          <th>Watchers</th>
-        </tr>
-      {{#each items}}
-      <tr>
-        <td><img class="logo img-responsive" src="{{owner.avatar_url}}"></td>
-        <td>{{name}}</td>
-        <td><a href="{{html_url}}">{{html_url}}</td>
-        <td>{{description}}</td>
-        <td>{{watchers_count}}</td>
-      </tr>
-      {{/each}}
-    </script>
-
-  </table>
-  <div class="pagination">
-        <button id="prev" class="btn btn-default" >Prev</button><button id="next" class="btn btn-default">Next</button>
-    <span id="pageCount">Page 1 of 49</span>
-  </div>
-</div><!--container-->
-
-<footer class="footer text-muted">
   <div class="container">
-    <div class="text-center">
-      <p>&copy 2016 Torgeir Haugen <a href="https://www.linkedin.com/profile/preview?locale=en_US&trk=prof-0-sb-preview-primary-button"><i class="fa fa-fw fa-linkedin"></i></a>
-        <a href="https://github.com/kodeebo"><i class="fa fa-fw fa-github"></i></a>
-      </p>
+    <h2 class="text-center">Javascript Repositories</h2>
+    <div class="table-responsive">
+      <table id="table" class="table table-hover table-bordered table-striped">
+      <!--template is inserted here-->
+      </table>
+    </div>
+    <div class="pagination">
+          <button id="prev" class="btn btn-default" >Prev</button><button id="next" class="btn btn-default">Next</button>
+      <span id="pageCount">Page 1 of 49</span>
+    </div>
+  </div><!--/container-->
+
+  <footer class="footer text-muted">
+    <div class="container">
+      <div class="text-center">
+        <p>&copy 2016 Torgeir Haugen <a href="https://www.linkedin.com/profile/preview?locale=en_US&trk=prof-0-sb-preview-primary-button"><i class="fa fa-fw fa-linkedin"></i></a>
+              <a href="https://github.com/kodeebo"><i class="fa fa-fw fa-github"></i></a>
+              </p>
     </div>
   </div>
-</footer>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/handlebars-v4.0.5.js"></script>
+  <script id="table-template" type="text/x-handlebars-template">
+          <tr>
+            <th>Avatar</th>
+            <th>Name</th>
+            <th>Url</th>
+            <th>Description</th>
+            <th>Watchers</th>
+          </tr>
+          {{#each items}}
+          <tr>
+            <td><img class="logo img-responsive" src="{{owner.avatar_url}}"></td>
+            <td>{{name}}</td>
+            <td><a href="{{html_url}}">{{html_url}}</td>
+          <td>{{description}}</td>
+          <td>{{watchers_count}}</td>
+        </tr>
+        {{/each}}
+  </script>
+
 </body>
