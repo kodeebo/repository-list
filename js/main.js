@@ -1,6 +1,3 @@
-  /**
-   * Run the function when content is loaded
-   */
 document.addEventListener('DOMContentLoaded', function() {
 
   /**
